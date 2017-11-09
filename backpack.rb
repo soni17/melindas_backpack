@@ -5,14 +5,14 @@ class Backpack
     @items = []
     @weather = @attributes[:weather]
     @day_of_week = @attributes[:day_of_week]
-    prepare
+    prepare_backpack
   end
 
   def items
     @items
   end
 
-  def prepare
+  def prepare_backpack
     pack_clothing
     pack_gym_shoes
     pack_lunch
@@ -49,7 +49,7 @@ class Backpack
   end
 
   # Prints a summary packing list for Melinda's backpack
-  def packing_list
+  def print_packing_list
     output = []
     output << "Melinda, here's your packing list!"
     output << "Day: #{@attributes[:day_of_week]}, Weather: #{@attributes[:weather]}"
